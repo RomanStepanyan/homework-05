@@ -87,7 +87,7 @@ nav {
     display: block;
     content: "";
     width: 100%;
-    height: 600px;
+    height: 100%;
     background-color: rgba(0, 0, 2, .52);
     position: absolute;
     top: 0;
@@ -99,7 +99,7 @@ nav {
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-        z-index: 2;
+    z-index: 2;
     
 }
 
@@ -135,18 +135,20 @@ nav {
     display: block;
     width: 104px;
     height: 104px;
-    font-size: 60px;
-    font-weight: 700;
-    color: #ffffff; 
-    background-color:rgba(78, 198, 171, .65)   
+    background-color:rgba(78, 198, 171, .65);
+    background-repeat: no-repeat;
+    background-position: center;
+       
 }
 
 .button-left {   
     float:left;
+    background-image: url(../img/slider-left-arrow.png);
 }
 
 .button-right {    
     float: right;
+    background-image: url(../img/slider-right-arrow.png);
 }   
 
 .button-box:hover {
@@ -156,7 +158,6 @@ nav {
 .new-collection {
     display: block;
     width: 100%;
-    height: 676px;
     background-color: #e9f0fd;    
 }
 
@@ -184,11 +185,7 @@ nav {
 
 .item-name-price {
     width: 255px;
-    position: absolute;
     background-color: #323232;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
 }
 
 .item-name-price h3, p {
@@ -202,6 +199,7 @@ nav {
 }
  
 .collection-item {
+    margin-bottom: 100px;
     position: relative;
     float:left;
 }
@@ -232,8 +230,7 @@ nav {
 }
 
 .products {
-    background-color: #e9f0fd;
-    padding-bottom: 106px;
+    background-color: #e9f0fd;    
 }
 
 .overlay {
@@ -242,16 +239,18 @@ nav {
     left:0;    
     border: 10px solid rgba(255, 255, 255, .44);
     border-bottom: 56px solid rgba(255, 255, 255, .44);
-    width: 255px;
-    height: 322px;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 2, .52);
     background-clip: content-box;
     display: none;
 }
 .overlay-list {
+    font-size: 0px;
     position: absolute;
-    top: 32%;
-    left: 15%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 3;
 
 }
@@ -262,15 +261,17 @@ nav {
     border: 1px solid #ffffff;
     background-repeat: no-repeat;
     background-position: center;
-    background-color: rgba(0, 0, 2, .01);
+    background-color: transparent;
 }
 
 .heart-button {
+    margin-right: 10px;
     background-image: url("../img/heart-icon.png");
     
 }
     
 .arrows-button {
+    margin-right: 10px;
     background-image: url("../img/arrows-icon.png");
 }
 .clock-button {
@@ -295,15 +296,10 @@ nav {
     margin-bottom: 10px;
     float: left;
 }
-.overlay-list-item:hover:not(:last-child) .overlay-button {
+.overlay-list-item:hover .overlay-button {
     background-color: #1abc9c;
     border-color: #1abc9c;
     
-}
-
-
-.overlay-list-item:not(:last-child)  {
-    margin-right: 10px;
 }
 
 footer  {
@@ -326,7 +322,6 @@ footer  {
     line-height: 1.75;
     color: #46bfa9;
 }
-
 
 
 
